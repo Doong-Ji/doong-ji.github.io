@@ -44,73 +44,61 @@ const AppLayout: FC = ({ children }) => {
   return (
     <HeaderBox>
       <Layout>
-        <Header
-          style={{
-            zIndex: 1,
-            width: '100%',
-            transition: '0.8s all ease',
-            marginBottom: '64px',
-            display: 'flex',
-          }}
-        >
-          <Logo to="/" className="logo" onClick={toggleHome} />
-          <div className="nav">
-            <ul>
+        <div className="header">
+          <header className="gnb_pc">
+            <h1 className="logo_main">doongji</h1>
+            <nav>
+              <ul className="gnb">
+                <li className={location === 'about' ? 'active' : ''}>
+                  <Link to="/about">소개</Link>
+                </li>
+                <li className={location === 'project' ? 'active' : ''}>
+                  <Link to="/project">프로젝트</Link>
+                </li>
+                <li className={location === 'calendar' ? 'active' : ''}>
+                  <Link to="/calendar">캘린더</Link>
+                </li>
+                <li className={location === 'community' ? 'active' : ''}>
+                  <Link to="/community">커뮤니티</Link>
+                  <ul className="lnb">
+                    <li>
+                      <Link to="/">공지사항</Link>
+                    </li>
+                    <li>
+                      <Link to="/">자유게시판</Link>
+                    </li>
+                    <li>
+                      <Link to="/">질문게시판</Link>
+                    </li>
+                    <li>
+                      <Link to="/">링크게시판</Link>
+                    </li>
+                  </ul>
+                </li>
+                <li className={location === 'question' ? 'active' : ''}>
+                  <Link to="/question">Q&A</Link>
+                </li>
+              </ul>
+            </nav>
+            {/* <!-- snb 로그인, 로그아웃 상태에 따라 className 'on' 추가 --> */}
+            <ul className="snb status_logout on">
               <li>
-                <Link to="/about" className={location === 'about' ? 'active' : ''}>
-                  소개
-                </Link>
+                <Link to="/login">로그인</Link>
               </li>
-
               <li>
-                <Link to="/project" className={location === 'project' ? 'active' : ''}>
-                  프로젝트
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/calendar" className={location === 'calendar' ? 'active' : ''}>
-                  캘린더
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/community" className={location === 'community' ? 'active' : ''}>
-                  커뮤니티
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/question" className={location === 'question' ? 'active' : ''}>
-                  Q&A
-                </Link>
+                <Link to="/signup">로그아웃</Link>
               </li>
             </ul>
-          </div>
-          {isLogin ? (
-            <div className="login">
-              <div className="signin">
-                <Link to="/signin" className={location === 'signin' ? 'active' : ''}>
-                  로그인
-                </Link>
-              </div>
-              <div className="signup">
-                <Link to="/signup" className={location === 'signup' ? 'active' : ''}>
-                  회원가입
-                </Link>
-              </div>
-            </div>
-          ) : (
-            <div className="login">
-              <div className="signup">
-                <Dropdown trigger={trigger} options={options} />
-              </div>
-              <div className="signup">
-                <Dropdown trigger={alam} options={options} />
-              </div>
-            </div>
-          )}
-        </Header>
+            <ul className="snb status_login">
+              <li>
+                <Link to="/">알림</Link>
+              </li>
+              <li>
+                <Link to="/">내 정보</Link>
+              </li>
+            </ul>
+          </header>
+        </div>
         {children}
         <Footer
           style={{
