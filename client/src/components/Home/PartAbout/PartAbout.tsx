@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { Tabs } from 'antd';
 
 import { Content } from 'antd/lib/layout/layout';
@@ -6,7 +6,6 @@ import { SiteLayoutBackground } from './styeld';
 const { TabPane } = Tabs;
 
 // submenu keys of first level
-const rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
 
 const data = [
   {
@@ -31,15 +30,6 @@ const data = [
   },
 ];
 const PartAbout: FC = () => {
-  const [openKeys, setOpenKeys] = useState(['sub1']);
-  const onOpenChange = (keys: any[]) => {
-    const latestOpenKey = keys.find((key) => openKeys.indexOf(key) === -1);
-    if (rootSubmenuKeys.indexOf('' + latestOpenKey) === -1) {
-      setOpenKeys(keys);
-    } else {
-      setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
-    }
-  };
   return (
     <section className="section">
       <Content className="site-layout">

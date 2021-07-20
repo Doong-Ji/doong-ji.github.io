@@ -7,6 +7,7 @@ import SwiperCore, { Navigation, Pagination, Autoplay, EffectFade } from 'swiper
 // import Swiper styles
 import 'swiper/swiper-bundle.css';
 import 'swiper/components/effect-fade/effect-fade.min.css';
+import { useState } from 'react';
 
 const data = [
   {
@@ -35,6 +36,7 @@ const data = [
 const ProjectCarousel: FC = () => {
   SwiperCore.use([Navigation, Pagination, Autoplay, EffectFade]);
 
+  const [swiperIndex, setSwiperIndex] = useState(0);
   return (
     <section className="section">
       <Content>
@@ -56,10 +58,7 @@ const ProjectCarousel: FC = () => {
                   navigation={true}
                   pagination={{ type: 'fraction' }}
                   onSlideChange={(swiper) => {
-                    const slideTitle = document.getElementById('slideTitle');
-                    const slideContent = document.getElementById('slideContent');
-                    slideTitle!.innerHTML = data[swiper.realIndex].title;
-                    slideContent!.innerHTML = data[swiper.realIndex].coment;
+                    setSwiperIndex(swiper.realIndex);
                   }}
                 >
                   {data.map((item) => {
@@ -75,37 +74,8 @@ const ProjectCarousel: FC = () => {
               </div>
 
               <div className="swiper_container_txt">
-                <h2 id="slideTitle">dddd</h2>
-                <h3 id="slideContent">dd</h3>
-                {/* <Swiper
-                  className="swiper-container2"
-                  style={{ width: '100%' }}
-                  spaceBetween={0}
-                  slidesPerView={1}
-                  onSlideChange={() => {
-                    swiper: thumbsSwiper;
-                  }}
-                  effect={'fade'}
-                  loop={true}
-                  watchSlidesVisibility={true}
-                  watchSlidesProgress={true}
-                  pagenation={{}}
-                >
-                  <div>
-                    {data.map((item) => {
-                      return (
-                        <div key={item.id}>
-                          <SwiperSlide className="project_contnet_sliders">
-                            <h2>{item.title}</h2>
-                            <h3>{item.coment}</h3>
-                          </SwiperSlide>
-                        </div>
-                      );
-                    })}
-                    ;
-                  </div>
-                </Swiper> */}
-
+                <h2 id="slideTitle">{data[swiperIndex].title}</h2>
+                <h3 id="slideContent">{data[swiperIndex].coment}</h3>
                 <Link className="to_project_link" to="project">
                   VIEWMORE
                 </Link>

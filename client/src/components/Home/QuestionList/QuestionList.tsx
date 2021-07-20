@@ -1,4 +1,4 @@
-import { Button, List } from 'antd';
+import { List } from 'antd';
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -33,13 +33,15 @@ const QuestionList: FC = () => {
             itemLayout="horizontal"
             dataSource={data}
             renderItem={(item) => (
-              <List.Item>
-                <div className="Q">Q.</div>
-                <List.Item.Meta title={<a href="https://ant.design">{item.title}</a>} description={item.contents} />
-                <div>
-                  <img src="/assets/ico/ico_next_lg.svg" />
-                </div>
-              </List.Item>
+              <Link to={`question/${item.id}`}>
+                <List.Item>
+                  <div className="Q">Q.</div>
+                  <List.Item.Meta title={<a href="https://ant.design">{item.title}</a>} description={item.contents} />
+                  <div>
+                    <img src="/assets/ico/ico_next_lg.svg" />
+                  </div>
+                </List.Item>
+              </Link>
             )}
           />
           <Link className="to_question_link" to="question">

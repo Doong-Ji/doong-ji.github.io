@@ -17,6 +17,11 @@ export const SiteLayoutBackground = styled.div`
     text-align: left;
     border-radius: 4rem;
     border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    box-shadow: 1px 1px 2px 1px rgba(25, 25, 25, 0.1);
+  }
+  .ant-list-item:hover {
     box-shadow: 4px 4px 10px 2px rgba(25, 25, 25, 0.1);
   }
   .ant-list-item-meta {
