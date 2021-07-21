@@ -5,6 +5,7 @@ import SubMenu from 'antd/lib/menu/SubMenu';
 import { FC, useCallback, useEffect, useState } from 'react';
 import { Link, Link as LinkR } from 'react-router-dom';
 import { animateScroll as scroll } from 'react-scroll';
+import ModalBox from '../ModalBox';
 const AppLayout: FC = ({ children }) => {
   // TopNav scroll시 고정
   // const [scrollNav, setScrollNav] = useState(false);
@@ -69,9 +70,14 @@ const AppLayout: FC = ({ children }) => {
             <Button type="primary" shape="round" style={{ left: '50px' }}>
               <Link to="signup">Sign in</Link>
             </Button>
+            <ModalBox>
+              <h1>이것은 모달 샘플입니다</h1>
+              <h2>모달 태그 안에 원하시는 내용을 넣어주세요</h2>
+            </ModalBox>
           </Menu>
         </Header>
         {children}
+
         <Footer
           style={{
             marginTop: '64px',
