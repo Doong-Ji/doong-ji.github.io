@@ -56,12 +56,18 @@ export const SiteLayoutBackground = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 415px) {
+    .sub_title {
+      font-size: 1.8rem;
+    }
+  }
   @media only screen and (min-width: 769px) {
     .main_title {
       margin-left: 130px;
     }
     .sub_title {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
+      font-weight: bold;
       line-height: 2.5rem;
     }
     .doongji_about_content {
@@ -117,5 +123,7 @@ export const SiteLayoutBackground = styled.div`
         }
       }
     }
+  }
+  @media only screen and (min-width: 1280px) {
   }
 `;

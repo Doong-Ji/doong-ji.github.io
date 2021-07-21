@@ -41,7 +41,7 @@ const PartAbout: FC = () => {
             <span>구성되어 있나요?</span>
           </h1>
           <div className="part_img">
-            <img src="/assets/img/img_home_team_01.png"></img>
+            <div className="part_img_elm"></div>
           </div>
           <Tabs className="part_tabs_wrap" tabPosition={'bottom'}>
             {data &&

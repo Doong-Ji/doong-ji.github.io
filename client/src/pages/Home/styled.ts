@@ -27,7 +27,7 @@ export const HomeWrap = styled.div`
     position: absolute;
   }
   .btn_to_page {
-    padding: 4vw 7vw;
+    padding: 8px 20px;
     height: auto;
     background: #0442bf;
     border: #0442bf;
@@ -38,17 +38,31 @@ export const HomeWrap = styled.div`
       align-items: center;
     }
     span {
+      margin-right: 6px;
       font-size: 1rem;
-      margin-right: 3vw;
+      font-weight: 300;
     }
     img {
-      width: 12vw;
+      width: 50px;
+    }
+  }
+  @media only screen and (min-width: 415px) {
+    .main_title {
+      font-size: 2.8rem;
+      letter-spacing: -0.5vw;
+    }
+    .btn_to_page {
+      padding: 10px 20px;
+      span {
+        margin-right: 23px;
+        font-size: 1.4rem;
+      }
     }
   }
   @media only screen and (min-width: 769px) {
     background: white;
     .main_title {
-      font-size: 2.8rem;
+      font-size: 2.4rem;
       font-weight: 900;
       line-height: 3.5rem;
       letter-spacing: -0.2vw;
@@ -59,7 +73,6 @@ export const HomeWrap = styled.div`
     }
     //button component
     .btn_to_page {
-      padding: 1vw 2vw;
       height: auto;
       background: #0442bf;
       border: #0442bf;
@@ -70,12 +83,13 @@ export const HomeWrap = styled.div`
         align-items: center;
       }
       span {
-        font-size: 2.4rem;
-        margin-right: 3vw;
+        font-size: 1.4rem;
       }
       img {
-        width: 8vw;
+        width: 60px;
       }
     }
+  }
+  @media only screen and (min-width: 1281px) {
   }
 `;

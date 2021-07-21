@@ -32,18 +32,21 @@ export const ProjectItem = styled.div`
     background-size: contain;
   }
   .swiper_container_txt {
-    padding: 20vw;
+    padding: 20vw 20vw 33vw;
     background: #457ef2;
     .project_contnet_sliders {
       background: #457ef2;
     }
     h2 {
-      font-size: 2rem;
+      font-size: 1.4rem;
       color: #fff;
     }
     h3 {
+      font-family: 'Noto Serif KR', sans-serif;
       padding-top: 7vw;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      font-weight: 300;
       color: #fff;
     }
   }
@@ -90,7 +93,7 @@ export const ProjectItem = styled.div`
   .swiper-pagination-custom,
   .swiper-container-horizontal > .swiper-pagination-bullets {
     display: inline-block;
-    top: -10vw;
+    top: -18vw;
     left: auto;
     right: 34vw;
     bottom: auto;
@@ -103,7 +106,7 @@ export const ProjectItem = styled.div`
   }
   .swiper-button-prev,
   .swiper-button-next {
-    top: -10vw;
+    top: -18vw;
     bottom: auto;
     height: auto;
     margin-top: 0;
@@ -120,6 +123,27 @@ export const ProjectItem = styled.div`
   }
   .swiper-button-next {
     right: 3vw;
+  }
+  @media only screen and (min-width: 415px) {
+    .main_title {
+      font-size: 2.8rem;
+    }
+    .sub_title {
+      font-size: 1.6rem;
+    }
+    .swiper_container_txt {
+      h2 {
+        font-size: 2rem;
+        color: #fff;
+      }
+      h3 {
+        font-family: 'Noto Serif KR', sans-serif;
+        padding-top: 7vw;
+        font-size: 2rem;
+        font-weight: 300;
+        color: #fff;
+      }
+    }
   }
   @media only screen and (min-width: 769px) {
     padding-top: 14vw;
