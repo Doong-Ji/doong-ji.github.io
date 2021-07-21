@@ -16,6 +16,11 @@ const GlobalStyle = css`
   .ant-carousel .slick-dots li button {
     height: 13px;
   }
+  //라운드 인풋박스
+  .input_round {
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+  }
 `;
 
 export default GlobalStyle;
