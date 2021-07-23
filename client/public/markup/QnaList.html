@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+        <title>doongji</title>
+
+        <!-- CSS -->
+        <link rel='stylesheet' href='./QnaList.css'>
+    </head>
+    <body>
+        <section class="top">
+            <!-- 게시판 이름 -->
+            <h1 class="main_tit">Q&A</h1>
+
+            <!-- 검색 -->
+            <form action='#'>
+                <fieldset class="search">
+                    <input
+                        type='search'
+                        placeholder="검색어를 입력하세요."
+                        onfocus="this.placeholder=''"
+                        onblur="this.placeholder='검색어를 입력하세요.'">
+                    <input
+                        class="btn_search"
+                        type='image'
+                        src="../assets/ico/ico_search.svg"
+                        alt="검색">
+                </fieldset>
+            </form>
+
+            <!-- 클릭시 관련된 질문만 노출 -->
+            <div class="btn_wrap">
+                <ul class="tap_menu">
+                    <li class="btn active">
+                        <a href='#'>전체</a>
+                    </li>
+                    <li class="btn">
+                        <a href='#'>일반</a>
+                    </li>
+                    <li class="btn">
+                        <a href='#'>퍼블리싱</a>
+                    </li>
+                    <li class="btn">
+                        <a href='#'>프론트엔드</a>
+                    </li>
+                    <li class="btn">
+                        <a href='#'>백엔드</a>
+                    </li>
+                </ul>
+
+                <!-- 클릭시 질문글 작성 페이지로 이동 -->
+                <div class="btn_question_box">
+                    <a class="btn_question" href="#">질문하기</a>
+                    <a class="btn_question_mobile" href="#"><img src='../assets/ico/ico_add_b.svg' alt='질문하기'></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <!-- Q&A 목록 -->
+            <ul class="list">
+                <!-- 비밀글 : 미답변 -->
+                <li class="list_item private">
+                    <div class="tit_warp">
+                        <span class="ico">Q.</span>
+                        <a class="tit_box" href="#">
+                            <p class="tit">제목을 입력해주세요.</p>
+                            <p class="author">
+                                <span class="user_nickname">nickname</span>
+                                &#183;
+                                <span class="reporting_date">2021-01-01</span></p>
+                        </a>
+                        <img src='../assets/ico/ico_private.svg' alt='비밀글'>
+                    </div>
+
+                    <!-- 파트/답변 여부에 따라 해당라벨 표시 -->
+                    <div class="label_box">
+                        <span class="label part">퍼블리싱</span>
+                        <span class="label unanswered">미답변</span>
+                    </div>
+                </li>
+
+                <!-- 공개글 : 답변완료 -->
+                <li class="list_item">
+                    <div class="tit_warp">
+                        <span class="ico">Q.</span>
+                        <a class="tit_box" href="#">
+                            <p class="tit">제목을 입력해주세요.제목을 입력해주세요제목을 입력해주세요제목을 입력해주세요제목을 입력해주세요.제목을 입력해주세요제목을
+                                입력해주세요제목을 입력해주세요</p>
+                            <p class="author">
+                                <span class="user_nickname">nickname</span>
+                                &#183;
+                                <span class="reporting_date">2021-01-01</span></p>
+                        </a>
+                        <img src='../assets/ico/ico_private.svg' alt='비밀글'>
+                    </div>
+
+                    <!-- 파트/답변 여부에 따라 해당라벨 표시 -->
+                    <div class="label_box">
+                        <span class="label part">백엔드</span>
+                        <span class="label answered">답변완료</span>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- 페이지 이동 -->
+            <div class="pagination">
+                <a class="btn_prev_10" href='#'><img src='../assets/ico/ico_prev10-g.svg' alt='이전 10페이지로 이동'></a>
+                <a class="btn_prev" href='#'><img src='../assets/ico/ico_prev-g.svg' alt='이전 페이지로 이동'></a>
+                <a class="active" href='#'>1</a>
+                <a href='#'>2</a>
+                <a href='#'>3</a>
+                <a class="btn_next" href='#'><img src='../assets/ico/ico_next_g.svg' alt='다음 페이지로 이동'></a>
+                <a class="btn_next_10" href='#'><img src='../assets/ico/ico_next10_g.svg' alt='다음 10페이지로 이동'></a>
+            </div>
+        </section>
+    </body>
+</html>
