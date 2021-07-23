@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+        <title>doongji</title>
+
+        <!-- JS -->
+        <script src="./js/jquery-1.12.3.js"></script>
+        <script src="./js/Post.js"></script>
+
+        <!-- CSS -->
+        <link rel='stylesheet' href='./CommunityPost_default.css'>
+    </head>
+    <body>
+        <!-- 제목영역 -->
+        <section class="panel">
+            <span class="label">공지</span>
+            <h1 class="tit">제목을 입력해주세요.</h1>
+
+            <!-- 작성자 -->
+            <div class="author_wrap">
+                <div class="author_box">
+                    <!-- 프로필 -->
+                    <button class="btn_user_profile">
+                        <img src='../assets/img/img_profile_default.png' alt='프로필이미지'>
+                    </button>
+
+                    <!-- 작성자 정보 -->
+                    <div class="author">
+                        <span class="user_nickname">nickname</span>
+                        <p>
+                            <span class="reporting_date">2021-01-01</span>&nbsp;<span class="reporting_time">11:11:11</span>
+                        </p>
+                    </div>
+
+                    <!-- 조회수 -->
+                    <div class="ico_box">
+                        <img src='../assets/ico/ico_eye.svg' alt='조회수'>
+                        <span class="num">111</span>
+                    </div>
+
+                    <!-- 프로필 팝업 -->
+                    <div class="modal_user_profile">
+                        <div class="user_profile_box">
+                            <img src='../assets/img/img_profile_default.png' alt='프로필이미지'>
+                        </div>
+                        <span class="user_nickname">nickname</span>
+                        <p class="user_memo">안녕하세요. nickname 입니다.</p>
+                        <a href='#'><img src='../assets/ico/ico_github_g.svg' alt='github'>ID or NAME</a>
+                    </div>
+                </div>
+
+                <!-- 신고/수정/삭제 버튼 -->
+                <div class="btn_wrap">
+                    <div class="btn_box">
+                        <button class="btn_report" type="button"><img src='../assets/ico/ico_report.svg' alt='신고'>신고</button>
+                        <button class="btn_edit" type="button"><img src='../assets/ico/ico_edit_g.svg' alt='수정'>수정</button>
+                        <button class="btn_delete" type="button"><img src='../assets/ico/ico_delete_g.svg' alt='삭제'>삭제</button>
+                    </div>
+
+                    <!-- 모바일 더보기 버튼 -->
+                    <button class="btn_more_mobile" type="button"><img src='../assets/ico/ico_more.svg' alt='더보기'></button>
+
+                    <!-- 더보기 클릭시 신고/수정/삭제 버튼 띄우기-->
+                    <div class="btn_box_more">
+                        <button class="btn_report" type="button">신고</button>
+                        <button class="btn_edit" type="button">수정</button>
+                        <button class="btn_delete" type="button">삭제</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 내용영역 -->
+        <section class="content">
+            <p class="content_txt">내용을 입력해주세요.</p>
+
+            <!-- 이모지 -->
+            <div class="emoji_box">
+                <button type="button"><img src='../assets/ico/ico_heart.svg' alt='좋아요'></button>
+                <span class="num">111</span>
+            </div>
+        </section>
+
+        <!-- 댓글영역 -->
+        <section class="comment">
+
+            <!-- 댓글입력 -->
+            <form class="comment_form" action='#'>
+                <fieldset class="comment_note">
+                    <textarea
+                        type='text'
+                        placeholder="댓글을 입력해주세요."
+                        onfocus="this.placeholder=''"
+                        onblur="this.placeholder='댓글을 입력해주세요.'"></textarea>
+
+                    <!-- 텍스트 입력시 background-color: #456fc5 변경 -->
+                    <input
+                        class="btn_send"
+                        type='image'
+                        src="../assets/ico/ico_send.svg"
+                        alt="댓글입력">
+                </fieldset>
+            </form>
+
+            <!-- 댓글수 -->
+            <div class="comment_num">
+                <img src='../assets/ico/ico_comment_g.svg' alt='댓글수'>
+                <p>&nbsp;댓글&nbsp;<span class="num">111</span></p>
+            </div>
+
+            <!-- 댓글목록 -->
+            <ul class="comment_list">
+                <!-- 댓글 -->
+                <li class="comment_list_item">
+                    <div class="comment_list_item_inner">
+                        <!-- 작성자 -->
+                        <div class="author_wrap">
+                            <!-- 프로필 -->
+                            <button class="btn_user_profile">
+                                <img src='../assets/img/img_profile_default.png' alt='프로필이미지'>
+                            </button>
+
+                            <!-- 작성자 정보 -->
+                            <div class="txt_box">
+                                <div class="author_box">
+                                    <span class="user_nickname">nickname</span>
+                                    &nbsp;&#183;&nbsp;
+                                    <span class="reporting_date">2021-01-01</span>&nbsp;<span class="reporting_time">11:11:11</span>
+                                </div>
+
+                                <p>댓글 아이콘을 클릭해보세요! 댓글 아이콘을 클릭해보세요! 댓글 아이콘을 클릭해보세요! 댓글 아이콘을 클릭해보세요! 댓글 아이콘을
+                                    클릭해보세요! 댓글 아이콘을 클릭해보세요! 댓글 아이콘을 클릭해보세요! 댓글 아이콘을 클릭해보세요!</p>
+                            </div>
+
+                            <!-- 프로필 팝업 -->
+                            <div class="modal_user_profile">
+                                <div class="user_profile_box">
+                                    <img src='../assets/img/img_profile_default.png' alt='프로필이미지'>
+                                </div>
+                                <span class="user_nickname">nickname</span>
+                                <p class="user_memo">안녕하세요. nickname 입니다.</p>
+                                <a href='#'><img src='../assets/ico/ico_github_g.svg' alt='github'>ID or NAME</a>
+                            </div>
+                        </div>
+
+                        <!-- 댓글/좋아요 버튼 -->
+                        <div class="btn_wrap">
+                            <div class="btn_box">
+                                <button class="btn_add_comment" type="button"><img src='../assets/ico/ico_comment_g.svg' alt='댓글달기'>
+                                    <span class="num">111</span></button>
+                                <button class="btn_like off" type="button"><img src='../assets/ico/ico_heart_off.svg' alt='좋아요off'>
+                                    <span class="num">111</span></button>
+                            </div>
+
+                            <!-- 더보기 버튼 -->
+                            <button class="btn_more" type="button"><img src='../assets/ico/ico_more.svg' alt='더보기'></button>
+
+                            <!-- 더보기 클릭시 신고/수정/삭제 버튼 띄우기-->
+                            <div class="btn_box_more">
+                                <button class="btn_report" type="button">신고</button>
+                                <button class="btn_edit" type="button">수정</button>
+                                <button class="btn_delete" type="button">삭제</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 댓글 아이콘 클릭시 대댓글 아래로 펼쳐지기 -->
+                    <ul class="comment_list depth">
+                        <li class="comment_list_item depth">
+                            <!-- 댓글입력 -->
+                            <form action='#'>
+                                <fieldset class="comment_note">
+                                    <textarea
+                                        type='text'
+                                        placeholder="댓글을 입력해주세요."
+                                        onfocus="this.placeholder=''"
+                                        onblur="this.placeholder='댓글을 입력해주세요.'"></textarea>
+
+                                    <!-- 텍스트 입력시 background-color: #456fc5 변경 -->
+                                    <input
+                                        class="btn_send"
+                                        type='image'
+                                        src="../assets/ico/ico_send.svg"
+                                        alt="댓글입력">
+                                </fieldset>
+                            </form>
+
+                            <!-- 대댓글 -->
+                            <div class="comment_list_item depth">
+                                <div class="comment_list_item_inner">
+                                    <!-- 작성자 -->
+                                    <div class="author_wrap">
+                                        <!-- 프로필 -->
+                                        <button class="btn_user_profile">
+                                            <img src='../assets/img/img_profile_default.png' alt='프로필이미지'>
+                                        </button>
+
+                                        <!-- 작성자 정보 -->
+                                        <div class="txt_box">
+                                            <div class="author_box">
+                                                <span class="user_nickname">nickname</span>
+                                                &nbsp;&#183;&nbsp;
+                                                <span class="reporting_date">2021-01-01</span>&nbsp;<span class="reporting_time">11:11:11</span>
+                                            </div>
+
+                                            <p>내용을 입력해주세요.</p>
+                                        </div>
+
+                                        <!-- 프로필 팝업 -->
+                                        <div class="modal_user_profile">
+                                            <div class="user_profile_box">
+                                                <img src='../assets/img/img_profile_default.png' alt='프로필이미지'>
+                                            </div>
+                                            <span class="user_nickname">nickname</span>
+                                            <p class="user_memo">안녕하세요. nickname 입니다.</p>
+                                            <a href='#'><img src='../assets/ico/ico_github_g.svg' alt='github'>ID or NAME</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- 좋아요 버튼 -->
+                                    <div class="btn_wrap">
+                                        <div class="btn_box">
+                                            <button class="btn_like off" type="button"><img src='../assets/ico/ico_heart_off.svg' alt='좋아요off'>
+                                                <span class="num">111</span></button>
+                                        </div>
+
+                                        <!-- 더보기 버튼 -->
+                                        <button class="btn_more" type="button"><img src='../assets/ico/ico_more.svg' alt='더보기'></button>
+
+                                        <!-- 더보기 클릭시 신고/수정/삭제 버튼 띄우기-->
+                                        <div class="btn_box_more">
+                                            <button class="btn_report" type="button">신고</button>
+                                            <button class="btn_edit" type="button">수정</button>
+                                            <button class="btn_delete" type="button">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 대댓글 -->
+                            <div class="comment_list_item depth">
+                                <div class="comment_list_item_inner">
+                                    <!-- 작성자 -->
+                                    <div class="author_wrap">
+                                        <!-- 프로필 -->
+                                        <button class="btn_user_profile">
+                                            <img src='../assets/img/img_profile_default.png' alt='프로필이미지'>
+                                        </button>
+
+                                        <!-- 작성자 정보 -->
+                                        <div class="txt_box">
+                                            <div class="author_box">
+                                                <span class="user_nickname">nickname</span>
+                                                &nbsp;&#183;&nbsp;
+                                                <span class="reporting_date">2021-01-01</span>&nbsp;<span class="reporting_time">11:11:11</span>
+                                            </div>
+
+                                            <p>내용을 입력해주세요.</p>
+                                        </div>
+
+                                        <!-- 프로필 팝업 -->
+                                        <div class="modal_user_profile">
+                                            <div class="user_profile_box">
+                                                <img src='../assets/img/img_profile_default.png' alt='프로필이미지'>
+                                            </div>
+                                            <span class="user_nickname">nickname</span>
+                                            <p class="user_memo">안녕하세요. nickname 입니다.</p>
+                                            <a href='#'><img src='../assets/ico/ico_github_g.svg' alt='github'>ID or NAME</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- 좋아요 버튼 -->
+                                    <div class="btn_wrap">
+                                        <div class="btn_box">
+                                            <button class="btn_like off" type="button"><img src='../assets/ico/ico_heart_off.svg' alt='좋아요off'>
+                                                <span class="num">111</span></button>
+                                        </div>
+
+                                        <!-- 더보기 버튼 -->
+                                        <button class="btn_more" type="button"><img src='../assets/ico/ico_more.svg' alt='더보기'></button>
+
+                                        <!-- 더보기 클릭시 신고/수정/삭제 버튼 띄우기-->
+                                        <div class="btn_box_more">
+                                            <button class="btn_report" type="button">신고</button>
+                                            <button class="btn_edit" type="button">수정</button>
+                                            <button class="btn_delete" type="button">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- 댓글 -->
+                <li class="comment_list_item">
+                    <div class="comment_list_item_inner">
+                        <!-- 작성자 -->
+                        <div class="author_wrap">
+                            <!-- 프로필 -->
+                            <button class="btn_user_profile">
+                                <img src='../assets/img/img_profile_default.png' alt='프로필이미지'>
+                            </button>
+
+                            <!-- 프로필 팝업 -->
+                            <div class="modal_user_profile">
+                                <div class="user_profile_box">
+                                    <img src='../assets/img/img_profile_default.png' alt='프로필이미지'>
+                                </div>
+                                <span class="user_nickname">nickname</span>
+                                <p class="user_memo">안녕하세요. nickname 입니다.</p>
+                                <a href='#'><img src='../assets/ico/ico_github_g.svg' alt='github'>ID or NAME</a>
+                            </div>
+
+                            <!-- 작성자 정보 -->
+                            <div class="txt_box">
+                                <div class="author_box">
+                                    <span class="user_nickname">nickname</span>
+                                    &nbsp;&#183;&nbsp;
+                                    <span class="reporting_date">2021-01-01</span>&nbsp;<span class="reporting_time">11:11:11</span>
+                                </div>
+
+                                <p>내용을 입력해주세요.</p>
+                            </div>
+                        </div>
+
+                        <!-- 댓글/좋아요 버튼 -->
+                        <div class="btn_wrap">
+                            <div class="btn_box">
+                                <button class="btn_add_comment" type="button"><img src='../assets/ico/ico_comment_g.svg' alt='댓글달기'>
+                                    <span class="num">111</span></button>
+                                <button class="btn_like off" type="button"><img src='../assets/ico/ico_heart_off.svg' alt='좋아요off'>
+                                    <span class="num">111</span></button>
+                            </div>
+
+                            <!-- 더보기 버튼 -->
+                            <button class="btn_more" type="button"><img src='../assets/ico/ico_more.svg' alt='더보기'></button>
+
+                            <!-- 더보기 클릭시 신고/수정/삭제 버튼 띄우기-->
+                            <div class="btn_box_more">
+                                <button class="btn_report" type="button">신고</button>
+                                <button class="btn_edit" type="button">수정</button>
+                                <button class="btn_delete" type="button">삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- 댓글 -->
+                <li class="comment_list_item">
+                    <div class="comment_list_item_inner">
+                        <!-- 작성자 -->
+                        <div class="author_wrap">
+                            <!-- 프로필 -->
+                            <button class="btn_user_profile">
+                                <img src='../assets/img/img_profile_default.png' alt='프로필이미지'>
+                            </button>
+
+                            <!-- 프로필 팝업 -->
+                            <div class="modal_user_profile">
+                                <div class="user_profile_box">
+                                    <img src='../assets/img/img_profile_default.png' alt='프로필이미지'>
+                                </div>
+                                <span class="user_nickname">nickname</span>
+                                <p class="user_memo">안녕하세요. nickname 입니다.</p>
+                                <a href='#'><img src='../assets/ico/ico_github_g.svg' alt='github'>ID or NAME</a>
+                            </div>
+
+                            <!-- 작성자 정보 -->
+                            <div class="txt_box">
+                                <div class="author_box">
+                                    <span class="user_nickname">nickname</span>
+                                    &nbsp;&#183;&nbsp;
+                                    <span class="reporting_date">2021-01-01</span>&nbsp;<span class="reporting_time">11:11:11</span>
+                                </div>
+
+                                <p>내용을 입력해주세요.</p>
+                            </div>
+                        </div>
+
+                        <!-- 댓글/좋아요 버튼 -->
+                        <div class="btn_wrap">
+                            <div class="btn_box">
+                                <button class="btn_add_comment" type="button"><img src='../assets/ico/ico_comment_g.svg' alt='댓글달기'>
+                                    <span class="num">111</span></button>
+                                <button class="btn_like off" type="button"><img src='../assets/ico/ico_heart_off.svg' alt='좋아요off'>
+                                    <span class="num">111</span></button>
+                            </div>
+
+                            <!-- 더보기 버튼 -->
+                            <button class="btn_more" type="button"><img src='../assets/ico/ico_more.svg' alt='더보기'></button>
+
+                            <!-- 더보기 클릭시 신고/수정/삭제 버튼 띄우기-->
+                            <div class="btn_box_more">
+                                <button class="btn_report" type="button">신고</button>
+                                <button class="btn_edit" type="button">수정</button>
+                                <button class="btn_delete" type="button">삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 팝업 모음-->
+        <div class="bg_modal">
+            <!-- 신고 팝업 -->
+            <!-- 신고 버튼 클릭시 띄우기 -->
+            <div class="modal report">
+                <p class="txt">신고하는 사유가 무엇인가요?</p>
+                <form action='#'>
+                    <fieldset class="radio_box">
+                        <div class="checks">
+                            <input type="radio" id="rd0" name="ex_rds">
+                            <label for="rd0">욕설/비방</label>
+                        </div>
+                        <div class="checks">
+                            <input type="radio" id="rd1" name="ex_rds">
+                            <label for="rd1">도배</label>
+                        </div>
+                        <div class="checks">
+                            <input type="radio" id="rd2" name="ex_rds">
+                            <label for="rd2">음란성</label>
+                        </div>
+
+                        <div class="checks">
+                            <input type="radio" id="rd3" name="ex_rds">
+                            <label for="rd3">광고</label>
+                        </div>
+
+                        <div class="checks">
+                            <input type="radio" id="rd4" name="ex_rds">
+                            <label for="rd4">기타</label>
+                        </div>
+
+                        <input class="txt_field" type='text'>
+                    </fieldset>
+                </form>
+
+                <!-- 취소/확인 버튼 -->
+                <div class="btn_box">
+                    <button class="btn_cancel" type="button">취소</button>
+                    <button class="btn_action" type="button">확인</button>
+                </div>
+            </div>
+
+            <!-- 삭제 팝업 -->
+            <!-- 삭제 버튼 클릭시 띄우기 -->
+            <div class="modal delete">
+                <p class="txt">해당 글을 삭제하시겠습니까?</p>
+
+                <!-- 취소/확인 버튼 -->
+                <div class="btn_box">
+                    <button class="btn_cancel" type="button">취소</button>
+                    <button class="btn_action" type="button">확인</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

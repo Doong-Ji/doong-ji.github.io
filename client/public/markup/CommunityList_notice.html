@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+        <title>doongji</title>
+
+        <!-- JS -->
+        <script src="./js/jquery-1.12.3.js"></script>
+        <script src="./js/CommunityList_notice.js"></script>
+
+        <!-- CSS -->
+        <link rel='stylesheet' href='./CommunityList_notice.css'>
+    </head>
+    <body>
+        <section class="top">
+            <!-- 게시판 이름 -->
+            <h1 class="main_tit">공지사항</h1>
+
+            <!-- 검색 -->
+            <form action='#'>
+                <fieldset class="search">
+                    <input
+                        type='search'
+                        placeholder="검색어를 입력하세요."
+                        onfocus="this.placeholder=''"
+                        onblur="this.placeholder='검색어를 입력하세요.'">
+                    <input
+                        class="btn_search"
+                        type='image'
+                        src="../assets/ico/ico_search.svg"
+                        alt="검색">
+                </fieldset>
+            </form>
+
+            <!-- 클릭시 새 글쓰기 페이지로 이동 -->
+            <div class="btn_new_box">
+                <a class="btn_new" href="#">새 글 쓰기</a>
+                <a class="btn_new_mobile" href="#"><img src='../assets/ico/ico_add_b.svg' alt='새 글 쓰기'></a>
+            </div>
+        </section>
+
+        <section class="content">
+            <!-- 게시글 목록 -->
+            <ul class="list">
+                <!-- 고정글 -->
+                <li class="list_item fixing">
+                    <div class="tit_warp">
+                        <span class="label">공지</span>
+                        <a class="tit_box" href="#">
+                            <p class="tit">제목을 입력해주세요.제목을 입력해주세요.제목을 입력해주세요.제목을 입력해주세요.제목을 입력해주세요.제목을
+                                입력해주세요.제목을 입력해주세요.제목을 입력해주세요.제목을 입력해주세요.제목을 입력해주세요.제목을 입력해주세요.</p>
+                            <p class="author">
+                                <span class="user_nickname">nickname</span>
+                                &#183;
+                                <span class="reporting_date">2021-01-01</span></p>
+                        </a>
+                    </div>
+
+                    <div class="ico_wrap">
+                        <!-- 확인수 -->
+                        <div class="ico_box">
+                            <img src='../assets/ico/ico_checkbox_circle.svg' alt='확인'>
+                            <span class="num">111</span>
+                        </div>
+
+                        <!-- 댓글수 -->
+                        <div class="ico_box">
+                            <img src='../assets/ico/ico_comment_lg.svg' alt='댓글'>
+                            <span class="num">111</span>
+                        </div>
+
+                        <!-- 좋아요수 -->
+                        <div class="ico_box">
+                            <img src='../assets/ico/ico_heart.svg' alt='좋아요'>
+                            <spa class="num" n="n">111</spa>
+                        </div>
+                    </div>
+
+                    <!-- 확인팝업 -->
+                    <div class="modal_check">
+                        <p class="check_user">이 글을
+                            <span>7</span>명이 확인했습니다.</p>
+                        <p class="user_name">nickname(이름), nickname(이름), nickname(이름), nickname(이름),
+                            nickname(이름), nickname(이름), nickname(이름)</p>
+                    </div>
+                </li>
+
+                <!-- 일반글 -->
+                <li class="list_item">
+                    <div class="tit_warp">
+                        <span class="label">공지</span>
+                        <a class="tit_box" href="#">
+                            <p class="tit">제목을 입력해주세요.</p>
+                            <p class="author">
+                                <span class="user_nickname">nickname</span>
+                                &#183;
+                                <span class="reporting_date">2021-01-01</span></p>
+                        </a>
+                    </div>
+
+                    <div class="ico_wrap">
+                        <!-- 확인수 -->
+                        <div class="ico_box">
+                            <img src='../assets/ico/ico_checkbox_circle.svg' alt='확인'>
+                            <span class="num">111</span>
+                        </div>
+
+                        <!-- 댓글수 -->
+                        <div class="ico_box">
+                            <img src='../assets/ico/ico_comment_lg.svg' alt='댓글'>
+                            <span class="num">111</span>
+                        </div>
+
+                        <!-- 좋아요수 -->
+                        <div class="ico_box">
+                            <img src='../assets/ico/ico_heart.svg' alt='좋아요'>
+                            <spa class="num" n="n">111</spa>
+                        </div>
+                    </div>
+
+                    <!-- 확인팝업 -->
+                    <div class="modal_check">
+                        <p class="check_user">이 글을
+                            <span>7</span>명이 확인했습니다.</p>
+                        <p class="user_name">nickname(이름), nickname(이름), nickname(이름), nickname(이름),
+                            nickname(이름), nickname(이름), nickname(이름)</p>
+                    </div>
+                </li>
+
+                <li class="list_item">
+                    <div class="tit_warp">
+                        <span class="label">공지</span>
+                        <a class="tit_box" href="#">
+                            <p class="tit">제목을 입력해주세요.</p>
+                            <p class="author">
+                                <span class="user_nickname">nickname</span>
+                                &#183;
+                                <span class="reporting_date">2021-01-01</span></p>
+                        </a>
+                    </div>
+
+                    <div class="ico_wrap">
+                        <!-- 확인수 -->
+                        <div class="ico_box">
+                            <img src='../assets/ico/ico_checkbox_circle.svg' alt='확인'>
+                            <span class="num">111</span>
+                        </div>
+
+                        <!-- 댓글수 -->
+                        <div class="ico_box">
+                            <img src='../assets/ico/ico_comment_lg.svg' alt='댓글'>
+                            <span class="num">111</span>
+                        </div>
+
+                        <!-- 좋아요수 -->
+                        <div class="ico_box">
+                            <img src='../assets/ico/ico_heart.svg' alt='좋아요'>
+                            <spa class="num" n="n">111</spa>
+                        </div>
+                    </div>
+                    <!-- 확인팝업 -->
+                    <div class="modal_check">
+                        <p class="check_user">이 글을
+                            <span>7</span>명이 확인했습니다.</p>
+                        <p class="user_name">nickname(이름), nickname(이름), nickname(이름), nickname(이름),
+                            nickname(이름), nickname(이름), nickname(이름)</p>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- 페이지 이동 -->
+            <div class="pagination">
+                <a class="btn_prev_10" href='#'><img src='../assets/ico/ico_prev10-g.svg' alt='이전 10페이지로 이동'></a>
+                <a class="btn_prev" href='#'><img src='../assets/ico/ico_prev-g.svg' alt='이전 페이지로 이동'></a>
+                <a class="active" href='#'>1</a>
+                <a href='#'>2</a>
+                <a href='#'>3</a>
+                <a class="btn_next" href='#'><img src='../assets/ico/ico_next_g.svg' alt='다음 페이지로 이동'></a>
+                <a class="btn_next_10" href='#'><img src='../assets/ico/ico_next10_g.svg' alt='다음 10페이지로 이동'></a>
+            </div>
+        </section>
+    </body>
+</html>

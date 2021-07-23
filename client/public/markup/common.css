@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+/* FONT */
+/* font(en/num) : Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* font(ko) : Noto Sans KR */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+html {
+  /* font : (en/num) Roboto / (ko) Noto Sans KR */
+  font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+
+  /* font : rem의 기준 */
+  font-size:62.5%;
+}
+
+/* PC */
+body, p, a, button {
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #595959;
+}
+h1 {
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+h2 {
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+h3 {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+h4 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+h5 {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+.label, .check_user {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+.author, .num, .user_name, .reporting_date, .reporting_time {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.user_nickname, .reporting_date, .reporting_time, .num {
+  color: #a6a6a6;
+}
+
+/* radioo */
+.checks {position: relative;}
+.checks input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+.checks input[type="radio"] + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.checks input[type="radio"] + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 21px;
+  height: 21px;
+  text-align: center;
+  background: #f2f2f2;
+  border: 1px solid #e2e2e2;
+  border-radius: 100%;
+  box-shadow: 0px 0px 4px rgba(168, 168, 168, 0.25);
+}
+.checks input[type="radio"] + label:active:before,
+.checks input[type="radio"]:checked + label:active:before  {
+  box-shadow: 0px 0px 4px rgba(168, 168, 168, 0.25);
+}
+.checks input[type="radio"]:checked + label:before {
+  background: #f2f2f2;
+  border-color: #456fc5;
+}
+.checks input[type="radio"]:checked + label:after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  width: 13px;
+  height: 13px;
+  background: #456fc5;
+  border-radius: 100%;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+/* MOBILE */
+@media (max-width:480px) {
+  /* common */
+  body, p, a, button {
+    font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+  .label {
+    font-size: 1.2rem;
+}
+}
