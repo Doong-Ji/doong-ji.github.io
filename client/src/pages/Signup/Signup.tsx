@@ -1,9 +1,9 @@
 import { FC, useState, useCallback } from 'react';
-
+import { SignupBackground } from './styled';
 import useValidator from '@/hooks/useValidator';
 import { isName, isEmail, isPassword, isNickname } from '@/utils/validators';
-import SignupSuccess from './SignupSuccess';
-import SignupForm from './SignupForm';
+import SignupSuccess from '@/components/SignUp/SignupSuccess/SignupSuccess';
+import SignupForm from '@/components/SignUp/SignupProcess/SignupForm';
 
 const Signup: FC = () => {
   const [name, , onChangeName, isNameValid] = useValidator('', isName);
@@ -35,32 +35,34 @@ const Signup: FC = () => {
     [part],
   );
   return (
-    <>
-      {signupSuccess ? (
-        <SignupSuccess />
-      ) : (
-        <SignupForm
-          name={name}
-          email={email}
-          password={password}
-          passwordConfirm={passwordConfirm}
-          nickname={nickname}
-          part={part}
-          isNameValid={isNameValid}
-          isEmailValid={isEmailValid}
-          isPasswordValid={isPasswordValid}
-          isPasswordReValid={isPasswordReValid}
-          isNicknameValid={isNicknameValid}
-          onChangeName={onChangeName}
-          onChangeEmail={onChangeEmail}
-          onChangePassword={onChangePassword}
-          onChangePasswordReHandler={onChangePasswordReHandler}
-          onChangeNickname={onChangeNickname}
-          onClickSuccessSignup={onClickSuccessSignup}
-          onChangePart={onChangePart}
-        />
-      )}
-    </>
+    <SignupBackground>
+      <div className="signup_background_bottom">
+        {signupSuccess ? (
+          <SignupSuccess />
+        ) : (
+          <SignupForm
+            name={name}
+            email={email}
+            password={password}
+            passwordConfirm={passwordConfirm}
+            nickname={nickname}
+            part={part}
+            isNameValid={isNameValid}
+            isEmailValid={isEmailValid}
+            isPasswordValid={isPasswordValid}
+            isPasswordReValid={isPasswordReValid}
+            isNicknameValid={isNicknameValid}
+            onChangeName={onChangeName}
+            onChangeEmail={onChangeEmail}
+            onChangePassword={onChangePassword}
+            onChangePasswordReHandler={onChangePasswordReHandler}
+            onChangeNickname={onChangeNickname}
+            onClickSuccessSignup={onClickSuccessSignup}
+            onChangePart={onChangePart}
+          />
+        )}
+      </div>
+    </SignupBackground>
   );
 };
 
