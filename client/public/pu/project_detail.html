@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./project_detail.css" />
+    <link rel="stylesheet" href="../assets/global/import.css" />
+    <link rel="stylesheet" href="../assets/global/swiper.min.css" />
+    <script defer type="text/javascript" src="./project_detail.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="../assets/global/swipe.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/global/swiper.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- component : Header -->
+      <div class="header">
+        <header></header>
+      </div>
+
+      <!-- content -->
+      <main>
+        <!-- component : TopWrapDetail -->
+        <section class="top_wrap_detail">
+          <h1>둥지오피셜사이트</h1>
+          <div class="txt_wrap">
+            <h2>참여인원</h2>
+            <ul>
+              <li>
+                <span class="label">PL</span>
+                <p>홍길동</p>
+              </li>
+              <li>
+                <span class="label">기획</span>
+                <p>전체</p>
+              </li>
+              <li>
+                <span class="label">디자인</span>
+                <p>홍길동 / 홍길동 / 홍길동 / 홍길동</p>
+              </li>
+              <li>
+                <span class="label">퍼블리싱</span>
+                <p>홍길동 / 홍길동 / 홍길동 / 홍길동</p>
+              </li>
+              <li>
+                <span class="label">프론트</span>
+                <p>홍길동 / 홍길동 / 홍길동 / 홍길동</p>
+              </li>
+              <li>
+                <span class="label">백엔드</span>
+                <p>홍길동 / 홍길동 / 홍길동 / 홍길동</p>
+              </li>
+            </ul>
+          </div>
+          <div class="txt_wrap">
+            <h2>작업기간</h2>
+            <p>2021.05.29 - 2021.08.01</p>
+          </div>
+        </section>
+        <!-- component : ProjectContentImg -->
+        <section class="project_content_img">
+          <!-- testimg -->
+          <figure>
+            <img
+              src="../assets/img/test/img_leader_profile.jpg"
+              alt="프로젝트상세"
+            />
+          </figure>
+        </section>
+        <!-- component : TeamMember -->
+        <article class="team_member project_detail">
+          <!-- Swiper -->
+          <div class="swiper-container mySwiper">
+            <h3>Team members review</h3>
+            <p class="sub_ttl">팀원을 클릭하여 리뷰를 확인해보세요!</p>
+            <div class="swiper-wrapper user_profile_wrap">
+              <!-- component : UserProfileType02 -->
+              <div class="swiper-slide user_profile type02">
+                <figure>part leader profile</figure>
+                <div>
+                  <p>앵무</p>
+                  <p>모든걸 쪼아버리지 작다고 무시하면 큰일난다구?</p>
+                  <ul>
+                    <li>깃허브</li>
+                    <li>블로그</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide user_profile type02">
+                <figure>part leader profile</figure>
+                <div>
+                  <p>앵무</p>
+                  <p>모든걸 쪼아버리지 작다고 무시하면 큰일난다구?</p>
+                  <ul>
+                    <li>깃허브</li>
+                    <li>블로그</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide user_profile type02">
+                <figure>part leader profile</figure>
+                <div>
+                  <p>앵무</p>
+                  <p>모든걸 쪼아버리지 작다고 무시하면 큰일난다구?</p>
+                  <ul>
+                    <li>깃허브</li>
+                    <li>블로그</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide user_profile type02">
+                <figure>part leader profile</figure>
+                <div>
+                  <p>앵무</p>
+                  <p>모든걸 쪼아버리지 작다고 무시하면 큰일난다구?</p>
+                  <ul>
+                    <li>깃허브</li>
+                    <li>블로그</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- component : MeetingLog -->
+        <div class="meeting_log">
+          <section class="top">
+            <!-- 게시판 이름 -->
+            <h2>회의록</h2>
+
+            <!-- 검색 -->
+            <form action="#">
+              <fieldset class="search">
+                <input
+                  type="search"
+                  placeholder="검색어를 입력하세요."
+                  onfocus="this.placeholder=''"
+                  onblur="this.placeholder='검색어를 입력하세요.'"
+                />
+                <input
+                  class="btn_search"
+                  type="image"
+                  src="../assets/ico/ico_search.svg"
+                  alt="검색"
+                />
+              </fieldset>
+            </form>
+          </section>
+          <section class="content">
+            <!-- 게시글 목록 -->
+            <ul class="list">
+              <!-- 일반글 -->
+              <li class="list_item">
+                <a class="tit_box" href="#">
+                  <p class="tit">스토리보드회의3</p>
+                  <p class="author">
+                    <span class="user_nickname">nickname</span>
+                    &#183;
+                    <span class="reporting_date">2021-01-01</span>
+                  </p>
+                </a>
+                <p class="modify_date">최근수정일<span>2021-01-01</span></p>
+              </li>
+              <li class="list_item">
+                <a class="tit_box" href="#">
+                  <p class="tit">스토리보드회의2</p>
+                  <p class="author">
+                    <span class="user_nickname">nickname</span>
+                    &#183;
+                    <span class="reporting_date">2021-01-01</span>
+                  </p>
+                </a>
+                <p class="modify_date">최근수정일<span>2021-01-01</span></p>
+              </li>
+              <li class="list_item">
+                <a class="tit_box" href="#">
+                  <p class="tit">스토리보드회의1</p>
+                  <p class="author">
+                    <span class="user_nickname">nickname</span>
+                    &#183;
+                    <span class="reporting_date">2021-01-01</span>
+                  </p>
+                </a>
+                <p class="modify_date">최근수정일<span>2021-01-01</span></p>
+              </li>
+            </ul>
+
+            <!-- 페이지 이동 -->
+            <div class="pagination">
+              <a class="btn_prev_10" href="#"
+                ><img
+                  src="../assets/ico/ico_prev10-g.svg"
+                  alt="이전 10페이지로 이동"
+              /></a>
+              <a class="btn_prev" href="#"
+                ><img
+                  src="../assets/ico/ico_prev-g.svg"
+                  alt="이전 페이지로 이동"
+              /></a>
+              <a class="active" href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a class="btn_next" href="#"
+                ><img
+                  src="../assets/ico/ico_next_g.svg"
+                  alt="다음 페이지로 이동"
+              /></a>
+              <a class="btn_next_10" href="#"
+                ><img
+                  src="../assets/ico/ico_next10_g.svg"
+                  alt="다음 10페이지로 이동"
+              /></a>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- component : footer -->
+      <div class="footer">
+        <footer></footer>
+      </div>
+    </div>
+  </body>
+</html>
